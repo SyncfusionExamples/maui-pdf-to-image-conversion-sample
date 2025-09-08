@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PdfToImageConversionSample.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button x:Name="ConvertSinglePdfPageToImage" Text="Convert to Image" Clicked="ConvertSinglePdfPageToImage_Clicked"/>
+                <Button x:Name="ConvertMultiplePagesToImages" Text="Convert All Pages to Images" Clicked="ConvertMultiplePagesToImages_Clicked" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Padding="0,10,0,0">
+                <Button x:Name="ConvertWithCustomScaleImages" Text="Scale Images" Clicked="ConvertWithCustomScaleImages_Clicked" />
+                <Button x:Name="ConvertWithCustomSizeImages" Text="Custom Size Images" Clicked="ConvertWithCustomSizeImages_Clicked" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Padding="0,10,0,0">
+                <Button x:Name="ConvertPdfToImageAsync" Text="Convert to Image Async" Clicked="ConvertPdfToImageAsync_Clicked"/>
+                <Button x:Name="ConvertPassword" Text="Convert Encrypted Document" Clicked="ConvertPassword_Clicked"/>
+            </HorizontalStackLayout>
+            <ScrollView>
+                <VerticalStackLayout x:Name="ImageContainer" Spacing="10">
+                </VerticalStackLayout>
+            </ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
